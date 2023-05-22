@@ -27,203 +27,192 @@
     />
   </head>
   <body>
-    <div class="smart-wrap">
-      <div class="smart-forms smart-container wrap-2">
-        <div class="form-header header-primary">
-          <h4>
-            <i class="fa fa-calendar"></i>Make Room Reservations in Minutes
-          </h4>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <img class="palm-tree" src="images/logo.png" />
+        <a class="navbar-brand" href="#">Tropical Paradise Resort</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Explore</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">Book Your Vacation!</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Extra ⬇️
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Amenities</a></li>
+                  <li>
+                    <a class="dropdown-item" href="about.html">About Us</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Contact</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
-
-        <form method="post" action="/" id="booking-form">
-          <div class="form-body">
-            <div class="section">
-              <label for="guestname" class="field-label"
-                >Please Enter Your Name</label
-              >
-              <label for="guestname" class="field prepend-icon">
-                <input
-                  type="text"
-                  name="guestname"
-                  id="guestname"
-                  class="gui-input"
-                  required=""
-                  placeholder="John Doe/Jane Doe"
-                />
-                <span class="field-icon"><i class="fa fa-user"></i></span>
-              </label>
-            </div>
-
-            <div class="frm-row">
-              <div class="section colm colm6">
-                <label for="guestemail" class="field-label"
-                  >Email Address</label
-                >
-                <label for="guestemail" class="field prepend-icon">
-                  <input
-                    type="email"
-                    name="guestemail"
-                    id="guestemail"
-                    class="gui-input"
-                    required=""
-                    placeholder="john@something.com"
-                  />
-                  <span class="field-icon"><i class="fa fa-envelope"></i></span>
-                </label>
-              </div>
-
-              <div class="section colm colm6">
-                <label for="guestelephone" class="field-label"
-                  >Telephone / Mobile</label
-                >
-                <label for="guestelephone" class="field prepend-icon">
-                  <input
-                    type="text"
-                    name="guestelephone"
-                    id="guestelephone"
-                    class="gui-input"
-                    required=""
-                    placeholder="Telephone / Moble Number"
-                  />
-                  <span class="field-icon"
-                    ><i class="fa fa-phone-square"></i
-                  ></span>
-                </label>
-              </div>
-            </div>
-            <div class="frm-row">
-              <div class="section colm colm6">
-                <label for="adults" class="field-label">Number of Adults</label>
-                <label for="adults" class="field prepend-icon">
-                  <input
-                    type="number"
-                    id="adults"
-                    name="adults"
-                    class="gui-input"
-                    required=""
-                    placeholder="Number of adults"
-                  />
-                  <span class="field-icon"><i class="fa fa-users"></i></span>
-                </label>
-              </div>
-
-              <div class="section colm colm6">
-                <label for="children" class="field-label"
-                  >Number of Children</label
-                >
-                <label for="children" class="field prepend-icon">
-                  <input
-                    type="number"
-                    id="children"
-                    name="children"
-                    class="gui-input"
-                    required=""
-                    placeholder="Number of children"
-                  />
-                  <span class="field-icon"><i class="fa fa-users"></i></span>
-                </label>
-              </div>
-            </div>
-            <div class="frm-row">
-              <div class="section colm colm6">
-                <label for="checkin" class="field-label">Check-in Date</label>
-                <label for="checkin" class="field prepend-icon">
-                  <input
-                    type="text"
-                    id="checkin"
-                    name="checkin"
-                    class="gui-input"
-                    required=""
-                    placeholder="mm/dd/yyyy"
-                  />
-                  <span class="field-icon"><i class="fa fa-calendar"></i></span>
-                </label>
-              </div>
-
-              <div class="section colm colm6">
-                <label for="checkout" class="field-label">Check-out Date</label>
-                <label for="checkout" class="field prepend-icon">
-                  <input
-                    type="text"
-                    id="checkout"
-                    name="checkout"
-                    class="gui-input"
-                    required=""
-                    placeholder="mm/dd/yyyy"
-                  />
-                  <span class="field-icon"><i class="fa fa-calendar"></i></span>
-                </label>
-              </div>
-            </div>
-            <div class="spacer-t20 spacer-b30">
-              <div class="tagline">
-                <span>Please answer these questions for a pleasant stay</span>
-              </div>
-            </div>
-            <div class="frm-row">
-              <div class="option-group field" <div class="option-group field">
-                <div class="section colm colm6">
-                  <label class="switch">
-                    <input
-                      type="checkbox"
-                      name="switch1"
-                      id="switch1"
-                      value="switch1"
-                    />
-                    <span
-                      class="switch-label"
-                      data-on="YES"
-                      data-off="NO"
-                    ></span>
-                    <span>Will you be bringing a pet?</span>
-                  </label>
-                </div>
-
-                <div class="section colm colm6">
-                  <label class="switch">
-                    <input
-                      type="checkbox"
-                      name="switch2"
-                      id="switch2"
-                      value="switch2"
-                    />
-                    <span
-                      class="switch-label"
-                      data-on="YES"
-                      data-off="NO"
-                    ></span>
-                    <span>Do you need us to pick you up?</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="section">
-              <label for="comment" class="field-label"
-                >Anything else we should know about?</label
-              >
-              <label for="comment" class="field prepend-icon">
-                <textarea
-                  class="gui-textarea"
-                  id="comment"
-                  name="comment"
-                  placeholder="Let us know about any special accommodation needs"
-                ></textarea>
-                <span class="field-icon"><i class="fa fa-comments"></i></span>
-                <span class="input-hint">
-                  <strong>Please:</strong> Be as descriptive as possible
-                </span>
-              </label>
-            </div>
-          </div>
-          <div class="form-footer">
-            <button type="submit" class="button btn-primary">
-              Confirm Booking
-            </button>
-            <button type="reset" class="button">Cancel</button>
-          </div>
-        </form>
       </div>
-    </div>
+    </nav>
+
+    <form class="reservations-form">
+      <div class="mb-3 col-6">
+        <label for="name" class="form-label">
+          <h5>Full Name</h5>
+        </label>
+        <input type="text" class="form-control" id="full-name" placeholder="Serenity Cardona">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label"> <h5>Email Address: </h5></label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="scardona123@gmail.com" />
+      </div>
+      <div class="col-12">
+        <label for="check-in" class="form-label">
+          <h5>Check-In</h5>
+        </label>
+        <input type="date" required class="form-control" name="in-date" id="in-date">
+        <label for="check-out" required class="form-label">
+          <h5>Check-Out</h5>
+        </label>
+        <input type="date" class="form-control" name="out-date" id="out-date">
+      </div>
+        <label for="inputAddress" class="form-label"> <h5>Room Type: </h5></label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Queen
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> King </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            2-Bedroom Suite
+          </label>
+        </div>
+      </div>
+      <form id="total-guests">
+        <div class="mb-3 col-5">
+          <label for="total-adults" class="form-label">
+            <h5>Adults:</h5>
+          </label>
+          <input id="total-adults" type="number" min="1" max="10" required class="form-control">
+        </div>
+        <div class="mb-3 col-5">
+          <label for="total-children" class="form-label">
+            <h5>Children:</h5>
+          </label>
+          <input id="total-children" type="number" min="0" max="10" required class="form-control">
+        </div>
+        <label for="inputAddress" class="form-label"> <h5>Select discount:</h5></label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            None
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> AAA/Senior (10%) </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Military (20%)
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
   </body>
 </html>

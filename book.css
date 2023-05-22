@@ -1,0 +1,78 @@
+.reservations-form {
+    font-family: 'poiret one', cursive;
+}
+
+h5{
+    font-family: 'secular one', sans-serif;
+}
+    
+
+    .navbar {
+        background-color: turquoise;
+    }
+    .offcanvas-header{
+        background-color: none;
+    }
+    
+    .navbar-brand {
+        font-size: 50px;
+        font-family: 'Grand Hotel', cursive;
+    }
+    
+    #offcanvasNavbarLabel{
+        font-family: 'Grand Hotel', cursive;
+        font-size: 50px;
+    }
+    
+    .nav-item{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .offcanvas{
+        background-image: url("images/palmtree.jpg")
+    }
+    
+    .dropdown-item{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .nav-item:hover {
+        background-color: plum;
+    }
+    
+    .dropdown-item:hover {
+        background-color: plum;
+      }
+      
+      ul li a{
+        font-family: 'Poiret One', cursive;
+      }
+    
+      .btn {
+        font-family: 'Secular One', sans-serif;
+        font-weight: bold;
+        color: black;
+        font-size: 25px;
+    
+      }
+    
+    h1{
+        font-family: 'Secular One', sans-serif;
+        font-size: 35px;
+    }
+    
+    span{
+        text-decoration: underline plum wavy;
+    }
+    .carousel-item {
+        max-width: 80rem;
+    }
+    
+    .palm-tree{
+        display: flex;
+        width: 5rem;
+        float: left;
+    }
+    
