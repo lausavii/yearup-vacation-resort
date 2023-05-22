@@ -63,8 +63,13 @@ h1{
 span{
     text-decoration: underline plum wavy;
 }
+
+.carousel {
+  margin-bottom: 5rem;
+}
+
 .carousel-item {
-    max-width: 80rem;
+  height: 35rem;
 }
 
 .palm-tree{
