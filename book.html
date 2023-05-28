@@ -19,9 +19,12 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="book.css" />
     <script src="main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poiret+One&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poiret+One&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -103,114 +106,188 @@
       </div>
     </nav>
 
-    <form class="reservations-form">
+    <form
+      class="reservations-form"
+      onsubmit="event.preventDefault(); estimateStayCost()"
+    >
       <h1 class="reservation-title">Reserve Your Stay Today!</h1>
-      <div class="mb-3 col-6">
-        <label for="name" class="form-label">
-          <h5>Full Name</h5>
-        </label>
-        <input type="text" class="form-control" id="full-name" placeholder="Serenity Cardona">
-      </div>
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label"> <h5>Email Address: </h5></label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="scardona123@gmail.com" />
-      </div>
-      <div class="col-6">
-        <label for="check-in" class="form-label">
-          <h5>Check-In</h5>
-        </label>
-        <input type="date" required class="form-control" name="in-date" id="in-date">
-        <label for="check-out" required class="form-label">
-          <h5>Check-Out</h5>
-        </label>
-        <input type="date" class="form-control" name="out-date" id="out-date">
-      </div>
-        <label for="inputAddress" class="form-label"> <h5>Room Type: </h5></label>
-        <div class="form-check">
+      <div class="row">
+        <div class="mb-3 col-6">
+          <label for="full-name" class="form-label">
+            <h5>Full Name</h5>
+          </label>
           <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
+            type="text"
+            required
+            class="form-control"
+            id="full-name"
+            placeholder="Serenity Cardona"
           />
-          <label class="form-check-label" for="flexRadioDefault1">
-            Queen
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">
+            <h5>Email Address:</h5>
+          </label>
+          <input 
+            type="email"
+            required
+            class="form-control"
+            id="inputEmail4"
+            placeholder="scardona123@gmail.com"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <label for="in-date" class="form-label">
+            <h5>Check-In</h5>
+          </label>
+          <input
+            type="date"
+            required
+            class="form-control"
+            name="in-date"
+            id="in-date"
+          />
+        </div>
+        <div class="col-6">
+          <label for="out-date" class="form-label">
+            <h5>Check-Out</h5>
+          </label>
+          <input
+            type="date"
+            class="form-control"
+            name="out-date"
+            id="out-date"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <label for="room-type" class="form-label">
+            <h5>Room Type:</h5>
           </label>
         </div>
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
+            name="room-type"
+            id="Queen"
+            value="Queen"
           />
-          <label class="form-check-label" for="flexRadioDefault2"> King </label>
+          <label class="form-check-label" for="Queen">Queen</label>
         </div>
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
+            name="room-type"
+            id="King"
+            value="King"
             checked
           />
-          <label class="form-check-label" for="flexRadioDefault2">
-            2-Bedroom Suite
-          </label>
+          <label class="form-check-label" for="King">King</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="room-type"
+            id="2-Bedroom Suite"
+            value="2-Bedroom Suite"
+          />
+          <label class="form-check-label" for="2-Bedroom Suite"
+            >2-Bedroom Suite</label
+          >
         </div>
       </div>
-      <form id="total-guests">
-        <div class="mb-3 col-5">
+
+      <div class="row">
+        <div class="col-5">
           <label for="total-adults" class="form-label">
             <h5>Adults:</h5>
           </label>
-          <input id="total-adults" type="number" min="1" max="10" required class="form-control">
+          <input
+          id="total-adults"
+          type="number"
+          min="1"
+          max="6"
+          required
+          class="form-control"
+          />
         </div>
-        <div class="mb-3 col-5">
+        <div class="col-5">
           <label for="total-children" class="form-label">
             <h5>Children:</h5>
           </label>
-          <input id="total-children" type="number" min="0" max="10" required class="form-control">
-        </div>
-        <label for="inputAddress" class="form-label"> <h5>Select discount:</h5></label>
-        <div class="form-check">
           <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
+            id="total-children"
+            type="number"
+            min="0"
+            max="6"
+            required
+            class="form-control"
           />
-          <label class="form-check-label" for="flexRadioDefault1">
-            None
+        </div>
+      
+
+      <div class="row">
+        <div class="col-12">
+          <label for="discount" class="form-label">
+            <h5>Select discount:</h5>
           </label>
         </div>
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
+            name="discount"
+            id="no-discount"
+            value="none"
           />
-          <label class="form-check-label" for="flexRadioDefault2"> AAA/Senior (10%) </label>
+          <label class="form-check-label" for="no-discount">None</label>
         </div>
         <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
+            name="discount"
+            id="aaa-discount"
+            value="aaa"
             checked
           />
-          <label class="form-check-label" for="flexRadioDefault2">
-            Military (20%)
-          </label>
+          <label class="form-check-label" for="aaa-discount"
+            >AAA/Senior (10%)</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="discount"
+            id="military-discount"
+            value="military"
+          />
+          <label class="form-check-label" for="military-discount"
+            >Military (20%)</label
+          >
         </div>
       </div>
+
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">
+          Estimate Stay Cost
+        </button>
       </div>
+      <div id="messageDiv"></div>
+      <div id="room-cost"></div>
+      <div id="discount"></div>
+      <div id="discounted-room-cost"></div>
+      <div id="tax"></div>
+      <div id="total-cost"></div>
     </form>
   </body>
 </html>
